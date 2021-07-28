@@ -10,6 +10,12 @@
     }
     JCHArray.prototype = {
         constructor:JCHArray,
+        getSize(){
+            return this._size;
+        },
+        isEmpty(){
+            return this._size==0;
+        },
         add(index,val) {
             if(index<0 || index>this._size){
                 throw new Error('index:'+index+" 索引不合法,索引值应该在[0,"+this._size+"]之间!")

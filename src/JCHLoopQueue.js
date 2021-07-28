@@ -14,6 +14,10 @@
             var count = this._tail-this._font;
             return count>0?count:this._data.length+count;
         },
+        //用于测试
+        getVal(index){
+            return this._data[(index+this._font)%this._data.length];
+        },
         isEmpty(){
             return this._font == this._tail;
         },

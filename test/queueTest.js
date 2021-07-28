@@ -69,3 +69,4 @@ function queueTest(queue,name){
 }
 console.log('---queue----')
 queueTest(new JCH.JCHLoopQueue(),'JCHLoopQueue')
+queueTest(new JCH.JCHLinkQueue(),'JCHLinkQueue')

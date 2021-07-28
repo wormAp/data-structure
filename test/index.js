@@ -55,5 +55,35 @@ function test01(list) {
     list.swap(2,3);
     console.log(list.toString())
 }
+function test02(stack){
+    stack.push(1)
+    if(!(stack.getSize()==1 && stack.getTop()==1)){
+        console.error('测试不通过!')
+    }
+    console.log(stack.toString())
+    stack.push(2);
+    if(!(stack.getSize()==2 && stack.getTop()==2)){
+        console.error('测试不通过!')
+    }
+    console.log(stack.toString())
+    for(var i=0;i<10;i++){
+        stack.push(i);
+        if(!(stack.getTop()==i)){
+            console.error('测试不通过!')
+        }
+        if(i%3==0){
+            var temp = stack.pop();
+            if(i!==temp){
+                console.error('测试不通过!')
+            }
+        }
+    }
+    console.log(stack.toString())
+
+}
 test01(new JCH.JCHArray());
 test01(new JCH.JCHLinkList());
+console.log('----stack----')
+test02(new JCH.JCHLinkStack())
+
+

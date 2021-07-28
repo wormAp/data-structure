@@ -40,5 +40,6 @@ for(var i=0;i<1000;i++){
     var data = generalData(1000,10,10000);
     var baseSortData = baseSort(copy(data));
     check(baseSortData,JCH.sort.bubble(copy(data)),'bubble')
+    check(baseSortData,JCH.sort.select(copy(data)),'select')
 }
 console.log('sort pass')

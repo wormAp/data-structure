@@ -18,6 +18,12 @@ js 实现基本数据结构
     - 平衡二叉树
     - 红黑树
     - 线段树
+- Map
+	- LinkMap
+	- RedBlackMap
+- Set
+	- LinkSet
+	- RedBlackSet
 - 排序
     - 插入排序
     - 选择排序

@@ -85,5 +85,6 @@ test01(new JCH.JCHArray());
 test01(new JCH.JCHLinkList());
 console.log('----stack----')
 test02(new JCH.JCHLinkStack())
+test02(new JCH.JCHArrayStack());
 
 

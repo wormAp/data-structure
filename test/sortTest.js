@@ -41,5 +41,7 @@ for(var i=0;i<1000;i++){
     var baseSortData = baseSort(copy(data));
     check(baseSortData,JCH.sort.bubble(copy(data)),'bubble')
     check(baseSortData,JCH.sort.select(copy(data)),'select')
+    check(baseSortData,JCH.sort.insert(copy(data)),'insert')
+    check(baseSortData,JCH.sort.mergeSort(copy(data)),'mergeSort');
 }
 console.log('sort pass')

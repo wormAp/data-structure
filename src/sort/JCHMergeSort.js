@@ -4,15 +4,7 @@
 (function(exports){
     exports.JCH = exports.JCH || {};
     exports.JCH.sort = exports.JCH.sort || {};
-    function _insertSort(data,l,r){
-        for(var i=l;i<=r;i++){
-            var temp = data[i];
-            for(var j=i;j>l && data[j-1]>temp;j--){
-                data[j] = data[j-1];
-            }
-            data[j]=temp;
-        }
-    }
+    var insertWithLR = exports.JCH.sort.insertWithLR;
     function _merge(data,left,mid,right){
         var temp = new Array(right-left+1);
         for(var i=0;i<temp.length;i++){
@@ -40,7 +32,7 @@
     }
     function _mergeSorte(data,left,right){
         if(right-left<15){
-            _insertSort(data,left,right)
+            insertWithLR(data,left,right)
             return;
         }
         var mid = left+parseInt((right-left)/2);

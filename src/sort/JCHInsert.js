@@ -14,5 +14,15 @@
         }
         return data;
     }
+    function insertWithLR(data,l,r){
+        for(var i=l;i<=r;i++){
+            var temp = data[i];
+            for(var j=i;j>l && data[j-1]>temp;j--){
+                data[j] = data[j-1];
+            }
+            data[j]=temp;
+        }
+    }
+    exports.JCH.sort.insertWithLR = insertWithLR;
     exports.JCH.sort.insert = insert;
 })(window);

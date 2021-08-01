@@ -43,5 +43,6 @@ for(var i=0;i<1000;i++){
     check(baseSortData,JCH.sort.select(copy(data)),'select')
     check(baseSortData,JCH.sort.insert(copy(data)),'insert')
     check(baseSortData,JCH.sort.mergeSort(copy(data)),'mergeSort');
+    check(baseSortData,JCH.sort.fastsort(copy(data)),'fastsort');
 }
 console.log('sort pass')
